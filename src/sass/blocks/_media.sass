@@ -5,9 +5,6 @@
       width: 500px
       font-size: 44px
       line-height: 70px
-  .header
-    &__logo img
-      width: 70%
 
 @media (max-width: 1200px)
   .promo
@@ -20,29 +17,25 @@
       line-height: 60px
     &__subheader
       font-size: 14px
-  .header
-    &__logo img
-      width: 88%
-    &__contacts
-      margin-right: 13px
-    &__iconphone
-      margin-right: 5px
-      img
-        width: 15px
-        height: 15px
-    &__phone
-      font-size: 14px
-    &__social
-      &_item
-        padding-right: 5px
-        img
-          width: 15px
-          height: 15px
   .menu
     &__item
       padding-right: 35px
     &__link
       font-size: 12px
+  .header
+    &__iconphone
+      margin-right: 5px
+      img
+        width: 15px
+        height: auto
+    &__phone
+      margin-right: 20px
+      font-size: 16px
+    &__social img
+      width: 15px
+      height: auto
+    &__social_item:not(:last-child)
+      padding-right: 10px
   .button
     padding: 15px 39px
     font-size: 12px
@@ -64,15 +57,80 @@
       width: 100px
       img
         width: 100px
-    &__contacts
-      margin-right: 0
     &__iconphone
-      margin-right: 0
-      padding-right: 0
+      margin-right: 15px
     &__phone
-      margin-right: 0
-      padding-right: 0
       display: none
   .menu
     &__item
       padding-right: 30px
+
+@media (max-width: 767px)
+  .promo
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../../img/main/bg/bg-main.png) right 25% (center/cover) no-repeat
+    max-height: 690px
+    padding: 10px 10px 150px 10px
+    &__header
+      width: 355px
+      margin: 0 auto
+      margin-top: 134px
+      font-size: 32px
+      line-height: 40px
+      text-align: center
+    &__subheader
+      width: 355px
+      margin: 0 auto
+      margin-top: 20px
+      font-size: 16px
+      line-height: 22px
+      text-align: center
+    &__button
+      text-align: center
+      margin-top: 50px
+      a
+        font-size: 14px
+        padding: 20px 49px
+  .header
+    position: relative
+    &__social img, &__iconphone img
+      width: 20px
+    &__iconphone
+      margin-top: 1px
+    .hamburger
+      display: block
+      width: 30px
+      height: 30px
+      span
+        display: block
+        height: 2px
+        width: 100%
+        background-color: #fff
+        margin-bottom: 7px
+        transform: .5s all
+      &_active
+        span
+          margin-bottom: -2px
+          &:nth-child(1)
+            transform: translateY(10px) rotate(-45deg)
+          &:nth-child(2)
+            display: none
+          &:nth-child(3)
+            transform: translateY(10px) rotate(45deg)
+  .menu
+    position: fixed
+    flex-direction: column
+    justify-content: center
+    align-items: start
+    top: -20px
+    left: -100%
+    width: 50%
+    height: 100vh
+    padding: 20px 15px
+    background-color: rgba(0, 0, 0, .9)
+    transition: 0.6s all
+    &_active
+      left: 0
+    &__item
+      margin: 10px 20px
+    &__link
+      font-size: 16px
