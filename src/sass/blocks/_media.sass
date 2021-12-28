@@ -5,6 +5,11 @@
       width: 500px
       font-size: 44px
       line-height: 70px
+  .delivery
+    &__wrapper
+      width: 90%
+    &__text
+      margin-left: 20px
 
 @media (max-width: 1200px)
   .promo
@@ -44,6 +49,11 @@
   .button
     padding: 15px 39px
     font-size: 12px
+  .delivery
+    &__item:not(:last-child)
+      margin-bottom: 30px
+    &__text
+      font-size: 16px
 
 @media (max-width: 991px)
   .promo
@@ -76,7 +86,18 @@
       width: 730px
     &__item
       width: 220px
-
+  .background
+    background: transparent
+    background-size: none
+    margin-top: 0
+    padding-top: 0
+  .delivery
+    &__wrapper
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__img
+      margin-top: 30px
 
 @media (max-width: 767px)
   .promo
@@ -166,15 +187,30 @@
     &__item
       width: 287px
       margin-top: 30px
-  .background
-    background: transparent
-    background-size: none
-    margin-top: 0
-    padding-top: 0
   .carousel
     display: none
   .menuslider
     &__galery
       display: block
+  .delivery
+    &__item
+      flex-direction: column
+      justify-content: center
+      width: 355px
+      height: 200px
+      &:not(:first-child)
+        margin: 30px 0
+    &__text
+      width: 355px
+      height: 50px
+      text-align: center
+      margin-top: 20px
+    &__img
+      width: 355px
+      height: 270px
+      line-height: 270px
+      img
+        margin: 0
+        padding: 0
 
 @media (max-width: 575px)
