@@ -30,4 +30,9 @@ $(document).ready(function() {
             }
         }, ]
     });
+
+    $('.galery-slick').slick({
+        arrows: false,
+        dots: true
+    });
 });

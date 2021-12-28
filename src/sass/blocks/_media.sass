@@ -10,6 +10,9 @@
       width: 90%
     &__text
       margin-left: 20px
+  .grid-container
+    grid-template-columns: repeat(4, minmax(300px, auto))
+    grid-template-rows: repeat(2, minmax(229px, auto))
 
 @media (max-width: 1200px)
   .promo
@@ -54,6 +57,9 @@
       margin-bottom: 30px
     &__text
       font-size: 16px
+  .grid-container
+    grid-template-columns: repeat(4, minmax(246px, auto))
+    grid-template-rows: repeat(2, minmax(190px, auto))
 
 @media (max-width: 991px)
   .promo
@@ -98,6 +104,11 @@
       align-items: center
     &__img
       margin-top: 30px
+  .grid-container
+    grid-template-columns: repeat(4, minmax(192px, auto))
+    grid-template-rows: repeat(2, minmax(147px, auto))
+  .galery
+    margin-top: 80px
 
 @media (max-width: 767px)
   .promo
@@ -212,5 +223,35 @@
       img
         margin: 0
         padding: 0
+  .grid-container
+    display: none
+  .galery-slick
+    display: block
+    padding: 0 10px
+    .slick-slide
+      img
+        max-width: 100%
+    .galery__item
+      margin: 0 auto
+      max-width: 100%
+    .slick-dots
+      text-align: center
+      display: flex
+      justify-content: center
+      list-style: none
+      button
+        background: #fff
+        border: none
+        border-radius: 50%
+        width: 10px
+        height: 10px
+        margin: 5px
+        outline: none
+        font-size: 0
+    .slick-dots li[class="slick-active"] button
+      background: $main-color
+  .galery
+    margin-top: 40px
+
 
 @media (max-width: 575px)
