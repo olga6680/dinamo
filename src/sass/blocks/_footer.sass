@@ -1,0 +1,42 @@
+.footer
+  padding: 35px 110px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__item
+    height: 70px
+    line-height: 70px
+    padding: 0 7%
+    &:not(:last-child)
+      border-right: 1px solid #393939
+  &__link
+    vertical-align: middle
+    > a
+      color: #fff
+      text-decoration: none
+      &:hover, &:focus
+        text-decoration: underline
+  &__contacts
+    font-size: 19px
+    font-weight: bold
+  &__social
+    &:nth-child(2), &:nth-child(3)
+      padding-right: 5px
+  &__address
+    display: inline-block
+    height: 33px
+    font-size: 14px
+    line-height: 14px
+  &__email
+    font-size: 14px
+  &__info
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 35px
+  &__agreement
+    margin-right: 30px
+  &__name, &__agreement
+    color: #fff
+    font-size: 12px

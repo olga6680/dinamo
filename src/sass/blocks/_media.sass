@@ -13,6 +13,8 @@
   .grid-container
     grid-template-columns: repeat(4, minmax(300px, auto))
     grid-template-rows: repeat(2, minmax(229px, auto))
+  .footer__item
+    padding: 0 4%
 
 @media (max-width: 1200px)
   .promo
@@ -60,6 +62,11 @@
   .grid-container
     grid-template-columns: repeat(4, minmax(246px, auto))
     grid-template-rows: repeat(2, minmax(190px, auto))
+  .footer
+    padding: 25px 60px
+    &__item
+      padding: 0
+      padding-right: 15px
 
 @media (max-width: 991px)
   .promo
@@ -109,6 +116,17 @@
     grid-template-rows: repeat(2, minmax(147px, auto))
   .galery
     margin-top: 80px
+  .footer
+    padding: 25px 20px
+    &__logo img
+      width: 113px
+      height: auto
+    &__contacts
+      font-size: 16px
+    &__address, &__email
+      font-size: 12px
+    &__name, &__agreement
+      font-size: 10px
 
 @media (max-width: 767px)
   .promo
@@ -252,6 +270,30 @@
       background: $main-color
   .galery
     margin-top: 40px
-
+  .footer
+    padding: 90px 0 30px 0
+    &__wrapper, &__info
+      flex-direction: column
+      justify-content: center
+    &__item
+      text-align: center
+      &:last-child
+        order: 3
+      &:nth-child(3)
+        order: 4
+    &__item:not(:last-child)
+      border-right: none
+    &__logo img
+      width: 133px
+    &__contacts
+      font-size: 19px
+    &__email, &__address
+      font-size: 14px
+    &__agreement
+      display: block
+    &__info
+      margin-top: 20px
+      a, .footer__name
+        margin-top: 10px
 
 @media (max-width: 575px)
